@@ -13,8 +13,8 @@ def solution(xs):
         popped = xs.pop()
 
     resultList = xs + pos
-    if len(pos) == 0 and len(xs) == 0:
+    if not pos and len(xs) == 0:
         return str(0)
- 
-    result = functools.reduce(lambda x,y: x * y, resultList) 
+
+    result = functools.reduce(lambda x,y: x * y, resultList)
     return str(result)
